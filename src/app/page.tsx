@@ -106,7 +106,7 @@ export default function Home() {
               
               {/* Content */}
               <Typography variant="h2" className="mb-6">
-                You can Schedule and Join Your Parent's Doctor Appointments.
+                You can Schedule and Join Your Parent&apos;s Doctor Appointments.
               </Typography>
               
               <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
@@ -149,7 +149,7 @@ export default function Home() {
               </Typography>
               
               <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
-                According to the Kaiser Foundation there's over 100,000 pages of Medicare laws and regulations 
+                According to the Kaiser Foundation there&apos;s over 100,000 pages of Medicare laws and regulations 
                 for Medicare Part A, B, C and D – We help you navigate and choose the best coverage. Now, you can 
                 speak to an independent licensed Medicare agent to review your current plan and other options.
               </Typography>
@@ -315,7 +315,7 @@ export default function Home() {
               </Typography>
               
               <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
-                Our independent marketplace offers 12 different "extended warranty" companies providing an 
+                Our independent marketplace offers 12 different &quot;extended warranty&quot; companies providing an 
                 average savings of $2000. Stay safe, stay protected and get peace of mind. No middlemen, 
                 no headache, no sales commissions, no salesperson, and no phone calls.
               </Typography>
@@ -359,7 +359,7 @@ export default function Home() {
               </div>
               
               <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
-                Safe4R is the world's first Application where the power of social community exponentially 
+                Safe4R is the world&apos;s first Application where the power of social community exponentially 
                 increases the immediate and direct response to any situation we or our loved ones may be 
                 confronted with. Reliable and safe, higher security standards and only $12.99 Monthly.
               </Typography>
