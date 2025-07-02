@@ -1,113 +1,490 @@
-import Image from "next/image";
+import Image from 'next/image'
+import { Button } from '@/components/ui/Button'
+import { Card, CardContent, CardHeader } from '@/components/ui/Card'
+import { Typography } from '@/components/ui/Typography'
+import { Container } from '@/components/layout/Container'
+import { Grid } from '@/components/layout/Grid'
 
 export default function Home() {
   return (
-    <main className="flex min-h-screen flex-col items-center justify-between p-24">
-      <div className="z-10 max-w-5xl w-full items-center justify-between font-mono text-sm lg:flex">
-        <p className="fixed left-0 top-0 flex w-full justify-center border-b border-gray-300 bg-gradient-to-b from-zinc-200 pb-6 pt-8 backdrop-blur-2xl dark:border-neutral-800 dark:bg-zinc-800/30 dark:from-inherit lg:static lg:w-auto  lg:rounded-xl lg:border lg:bg-gray-200 lg:p-4 lg:dark:bg-zinc-800/30">
-          Get started by editing&nbsp;
-          <code className="font-mono font-bold">src/app/page.tsx</code>
-        </p>
-        <div className="fixed bottom-0 left-0 flex h-48 w-full items-end justify-center bg-gradient-to-t from-white via-white dark:from-black dark:via-black lg:static lg:h-auto lg:w-auto lg:bg-none">
-          <a
-            className="pointer-events-none flex place-items-center gap-2 p-8 lg:pointer-events-auto lg:p-0"
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className="dark:invert"
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
+    <div className="min-h-screen">
+      {/* Header */}
+      <header className="border-b border-green-200 bg-gradient-to-r from-white to-blue-50">
+        <Container>
+          <div className="flex items-center justify-between py-4">
+            <div className="flex items-center space-x-2">
+              <Image
+                src="/images/MyParentsBenefits.png"
+                alt="MyParentsBenefit Logo"
+                width={200}
+                height={50}
+                priority
+                className="h-auto w-auto max-h-12 object-contain"
+              />
+            </div>
+          </div>
+        </Container>
+      </header>
+
+      {/* Hero Section */}
+      <section className="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden">
+        {/* Background Image */}
+        <div className="absolute inset-0 z-0">
+          <Image
+            src="/images/mom-and-daughter.png"
+            alt="Mother and daughter spending quality time together - representing family support and connection"
+            fill
+            priority
+            className="object-cover object-center"
+            quality={100}
+          />
+          {/* Overlay for text readability */}
+          <div className="absolute inset-0 bg-accent-purple/40"></div>
+          {/* Gradient overlay for better text contrast */}
+          <div className="absolute inset-0 bg-gradient-to-r from-accent-purple/50 via-accent-magenta/20 to-accent-green/30"></div>
         </div>
-      </div>
+        
+        {/* Hero Content */}
+        <Container className="relative z-10">
+          <div className="text-center max-w-4xl mx-auto py-20">
+            <Typography variant="h1" className="mb-6 text-white drop-shadow-lg">
+              Helping You Help Your Parents with Caregiving.
+            </Typography>
+            <Typography variant="body" className="text-xl mb-8 text-white/90 drop-shadow-md max-w-3xl mx-auto">
+              Helping Mom or Dad Begins with Managing their Care Including Doctor Visits, Prescription Reminders, and Safety Alerts Supporting Everyday Life.
+            </Typography>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-accent-purple font-bold shadow-xl hover:bg-gray-100 border-2 border-white">
+                Get Started Today
+              </Button>
+              <Button size="lg" className="bg-accent-green text-white font-bold shadow-xl hover:bg-accent-green/90 border-2 border-accent-green">
+                Learn More
+              </Button>
+            </div>
+          </div>
+        </Container>
+        
+        {/* Scroll Indicator */}
+        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
+          <div className="animate-bounce">
+            <svg className="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
+            </svg>
+          </div>
+        </div>
+      </section>
 
-      <div className="relative flex place-items-center before:absolute before:h-[300px] before:w-full sm:before:w-[480px] before:-translate-x-1/2 before:rounded-full before:bg-gradient-radial before:from-white before:to-transparent before:blur-2xl before:content-[''] after:absolute after:-z-20 after:h-[180px] after:w-full sm:after:w-[240px] after:translate-x-1/3 after:bg-gradient-conic after:from-sky-200 after:via-blue-200 after:blur-2xl after:content-[''] before:dark:bg-gradient-to-br before:dark:from-transparent before:dark:to-blue-700 before:dark:opacity-10 after:dark:from-sky-900 after:dark:via-[#0141ff] after:dark:opacity-40 before:lg:h-[360px] z-[-1]">
-        <Image
-          className="relative dark:drop-shadow-[0_0_0.3rem_#ffffff70] dark:invert"
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+      {/* Lyric Healthcare Services Section */}
+      <section className="py-20 bg-gradient-to-br from-blue-50 to-purple-50">
+        <Container>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Lyric Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/lyric-image.png"
+                  alt="Lyric healthcare services for seniors"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Right - Content */}
+            <div className="order-1 lg:order-2">
+              {/* Lyric Logo */}
+              <div className="mb-6">
+                <Image
+                  src="/images/Lyric-Logo.png"
+                  alt="Lyric Logo"
+                  width={150}
+                  height={60}
+                  className="h-auto w-auto max-h-16 object-contain"
+                />
+              </div>
+              
+              {/* Content */}
+              <Typography variant="h2" className="mb-6">
+                You can Schedule and Join Your Parent's Doctor Appointments.
+              </Typography>
+              
+              <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
+                Have a 24/7 dedicated care team for your parents, grandparents and other loved ones. 
+                Our national network of providers is here for senior loved ones. Healthcare services 
+                include Urgent Care, Primary Care, Mental Health, Dermatology, Virtual MSK, Labs 
+                GLP-1 Weight Loss Program and Medications.
+              </Typography>
+              
+              <Button size="lg" className="bg-accent-purple text-white font-bold shadow-lg hover:bg-accent-purple/90 border-2 border-accent-purple" asChild>
+                <a href="https://getlyric.com/" target="_blank" rel="noopener noreferrer">
+                  LEARN MORE
+                </a>
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-      <div className="mb-32 grid text-center lg:max-w-5xl lg:w-full lg:mb-0 lg:grid-cols-4 lg:text-left">
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Docs{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Find in-depth information about Next.js features and API.
-          </p>
-        </a>
+      {/* Senior Protect Medicare Section */}
+      <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
+        <Container>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Content */}
+            <div>
+              {/* Senior Protect Logo */}
+              <div className="mb-6">
+                <Image
+                  src="/images/senior-protect-logo.png"
+                  alt="Senior Protect Logo"
+                  width={150}
+                  height={60}
+                  className="h-auto w-auto max-h-16 object-contain"
+                />
+              </div>
+              
+              {/* Content */}
+              <Typography variant="h2" className="mb-6">
+                Medicare and Other Senior Health Benefits Can Impact Family Caregiving.
+              </Typography>
+              
+              <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
+                According to the Kaiser Foundation there's over 100,000 pages of Medicare laws and regulations 
+                for Medicare Part A, B, C and D – We help you navigate and choose the best coverage. Now, you can 
+                speak to an independent licensed Medicare agent to review your current plan and other options.
+              </Typography>
+              
+              <Button size="lg" className="bg-accent-green text-white font-bold shadow-lg hover:bg-accent-green/90 border-2 border-accent-green" asChild>
+                <a href="https://myseniorprotect.com/" target="_blank" rel="noopener noreferrer">
+                  LEARN MORE
+                </a>
+              </Button>
+            </div>
+            
+            {/* Right - Senior Protect Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/senior-protect-image.png"
+                  alt="Senior Protect Medicare and health benefits services"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Learn{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Learn about Next.js in an interactive course with&nbsp;quizzes!
-          </p>
-        </a>
+      {/* Caring Village Section */}
+      <section className="py-20 bg-gradient-to-br from-pink-50 to-rose-50">
+        <Container>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Caring Village Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/caring-village-image.png"
+                  alt="Caring Village family caregiving dashboard and mobile app"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Right - Content */}
+            <div className="order-1 lg:order-2">
+              {/* Caring Village Logo */}
+              <div className="mb-6">
+                <Image
+                  src="/images/Caring-Village-Logo.png"
+                  alt="Caring Village Logo"
+                  width={150}
+                  height={60}
+                  className="h-auto w-auto max-h-16 object-contain"
+                />
+              </div>
+              
+              {/* Content */}
+              <Typography variant="h2" className="mb-6">
+                Save Time. Eliminate Frustration. And Keep Care Coordinated.
+              </Typography>
+              
+              <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
+                Caring Village is the only easy-to-use dashboard and senior support mobile application 
+                designed specifically for family caregivers, like you, making it easier, safer, and less 
+                stressful to care for an aging loved one.
+              </Typography>
+              
+              <Button size="lg" className="bg-accent-magenta text-white font-bold shadow-lg hover:bg-accent-magenta/90 border-2 border-accent-magenta" asChild>
+                <a href="https://caringvillage.com/" target="_blank" rel="noopener noreferrer">
+                  LEARN MORE
+                </a>
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Templates{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50`}>
-            Explore starter templates for Next.js.
-          </p>
-        </a>
+      {/* REFFEOW Pet Healthcare Section */}
+      <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
+        <Container>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Content */}
+            <div>
+              {/* REFFEOW Logo */}
+              <div className="mb-6">
+                <Image
+                  src="/images/REFFEOW-logo.png"
+                  alt="REFFEOW Logo"
+                  width={150}
+                  height={60}
+                  className="h-auto w-auto max-h-16 object-contain"
+                />
+              </div>
+              
+              {/* Content */}
+              <Typography variant="h2" className="mb-6">
+                Healthcare for All Family (Furry) Loved Ones.
+              </Typography>
+              
+              <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
+                You and your loved ones can enjoy access to pet healthcare with one flat rate, no quotes, 
+                no deductibles, no age restrictions, real RX benefits, quick reimbursements, competitive 
+                pricing and compassionate giving. We donate 20% of our profits to animal rescue organizations.
+              </Typography>
+              
+              <Button size="lg" className="bg-orange-600 text-white font-bold shadow-lg hover:bg-orange-700 border-2 border-orange-600" asChild>
+                <a href="https://ruffeow.com/" target="_blank" rel="noopener noreferrer">
+                  LEARN MORE
+                </a>
+              </Button>
+            </div>
+            
+            {/* Right - Ruffeow Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/Ruffeow-image.png"
+                  alt="REFFEOW pet healthcare services for family pets"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
 
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className="group rounded-lg border border-transparent px-5 py-4 transition-colors hover:border-gray-300 hover:bg-gray-100 hover:dark:border-neutral-700 hover:dark:bg-neutral-800/30"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2 className={`mb-3 text-2xl font-semibold`}>
-            Deploy{" "}
-            <span className="inline-block transition-transform group-hover:translate-x-1 motion-reduce:transform-none">
-              -&gt;
-            </span>
-          </h2>
-          <p className={`m-0 max-w-[30ch] text-sm opacity-50 text-balance`}>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+      {/* Chaiz Auto Protection Section */}
+      <section className="py-20 bg-gradient-to-br from-cyan-50 to-blue-50">
+        <Container>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Chaiz Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/chaiz-image.png"
+                  alt="Chaiz auto repair service protection for families"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Right - Content */}
+            <div className="order-1 lg:order-2">
+              {/* Chaiz Logo */}
+              <div className="mb-6">
+                <Image
+                  src="/images/Chaiz-Logo.png"
+                  alt="Chaiz Logo"
+                  width={150}
+                  height={60}
+                  className="h-auto w-auto max-h-16 object-contain"
+                />
+              </div>
+              
+              {/* Content */}
+              <Typography variant="h2" className="mb-6">
+                Keep Parents Safe with Auto Repair Service Protection Shop. Save. Protect.
+              </Typography>
+              
+              <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
+                Our independent marketplace offers 12 different "extended warranty" companies providing an 
+                average savings of $2000. Stay safe, stay protected and get peace of mind. No middlemen, 
+                no headache, no sales commissions, no salesperson, and no phone calls.
+              </Typography>
+              
+              <Button size="lg" className="bg-cyan-600 text-white font-bold shadow-lg hover:bg-cyan-700 border-2 border-cyan-600" asChild>
+                <a href="https://www.chaiz.com/" target="_blank" rel="noopener noreferrer">
+                  LEARN MORE
+                </a>
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Safe4R Driving Safety Section */}
+      <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
+        <Container>
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            {/* Left - Content */}
+            <div>
+              {/* Safe4R Logo */}
+              <div className="mb-6">
+                <Image
+                  src="/images/Safe4R-Logo.png"
+                  alt="Safe4R Logo"
+                  width={150}
+                  height={60}
+                  className="h-auto w-auto max-h-16 object-contain"
+                />
+              </div>
+              
+              {/* Content */}
+              <Typography variant="h2" className="mb-6">
+                Keep Mom and Dad Connected When Driving.
+              </Typography>
+              
+              <div className="mb-6">
+                <Typography variant="h4" className="text-accent-magenta font-semibold">
+                  Over 1 Million+ People Protected
+                </Typography>
+              </div>
+              
+              <Typography variant="body" className="text-lg text-slate-700 mb-8 leading-relaxed">
+                Safe4R is the world's first Application where the power of social community exponentially 
+                increases the immediate and direct response to any situation we or our loved ones may be 
+                confronted with. Reliable and safe, higher security standards and only $12.99 Monthly.
+              </Typography>
+              
+              <Button size="lg" className="bg-indigo-600 text-white font-bold shadow-lg hover:bg-indigo-700 border-2 border-indigo-600" asChild>
+                <a href="https://www.safe4r.com/" target="_blank" rel="noopener noreferrer">
+                  LEARN MORE
+                </a>
+              </Button>
+            </div>
+            
+            {/* Right - Safe4R Image */}
+            <div className="relative">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/Safe4R-Image.png"
+                  alt="Safe4R driving safety app connecting families"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* CTA Section */}
+      <section className="py-20 bg-gradient-to-r from-accent-purple via-accent-magenta to-accent-green">
+        <Container>
+          <div className="text-center max-w-3xl mx-auto">
+            <Typography variant="h2" className="mb-4 text-white">
+              Ready to Get Started?
+            </Typography>
+            <Typography variant="body" className="text-xl mb-8 text-white/90">
+              Join thousands of families who trust MyParentsBenefit for their parenting journey.
+            </Typography>
+            <div className="flex flex-col sm:flex-row gap-4 justify-center">
+              <Button size="lg" className="bg-white text-accent-purple font-bold shadow-xl hover:bg-gray-100 border-2 border-white">
+                Create Account
+              </Button>
+              <Button size="lg" className="bg-accent-green text-white font-bold shadow-xl hover:bg-accent-green/90 border-2 border-accent-green">
+                Contact Us
+              </Button>
+            </div>
+          </div>
+        </Container>
+      </section>
+
+      {/* Footer */}
+      <footer className="py-12 border-t border-purple-200 bg-gradient-to-br from-slate-50 to-gray-50">
+        <Container>
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+            <div>
+              <Typography variant="h4" className="mb-4">
+                Resources
+              </Typography>
+              <div className="space-y-2">
+                <a href="#" className="block text-slate-600 hover:text-accent-purple">
+                  Parenting Guides
+                </a>
+                <a href="#" className="block text-slate-600 hover:text-accent-purple">
+                  Development Milestones
+                </a>
+                <a href="#" className="block text-slate-600 hover:text-accent-purple">
+                  Educational Materials
+                </a>
+              </div>
+            </div>
+            <div>
+              <Typography variant="h4" className="mb-4">
+                Community
+              </Typography>
+              <div className="space-y-2">
+                <a href="#" className="block text-slate-600 hover:text-accent-magenta">
+                  Forums
+                </a>
+                <a href="#" className="block text-slate-600 hover:text-accent-magenta">
+                  Support Groups
+                </a>
+                <a href="#" className="block text-slate-600 hover:text-accent-magenta">
+                  Events
+                </a>
+              </div>
+            </div>
+            <div>
+              <Typography variant="h4" className="mb-4">
+                Support
+              </Typography>
+              <div className="space-y-2">
+                <a href="#" className="block text-slate-600 hover:text-accent-green">
+                  Help Center
+                </a>
+                <a href="#" className="block text-slate-600 hover:text-accent-green">
+                  Contact Us
+                </a>
+                <a href="#" className="block text-slate-600 hover:text-accent-green">
+                  FAQs
+                </a>
+              </div>
+            </div>
+            <div>
+              <Typography variant="h4" className="mb-4">
+                Company
+              </Typography>
+              <div className="space-y-2">
+                <a href="#" className="block text-slate-600 hover:text-accent-purple">
+                  About Us
+                </a>
+                <a href="#" className="block text-slate-600 hover:text-accent-purple">
+                  Privacy Policy
+                </a>
+                <a href="#" className="block text-slate-600 hover:text-accent-purple">
+                  Terms of Service
+                </a>
+              </div>
+            </div>
+          </div>
+          <div className="mt-12 pt-8 border-t border-accent-magenta/20 text-center">
+            <Typography variant="caption">
+              © 2024 MyParentsBenefit. All rights reserved.
+            </Typography>
+          </div>
+        </Container>
+      </footer>
+    </div>
+  )
 }
