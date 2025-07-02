@@ -36,7 +36,7 @@ export default function Home() {
       </header>
 
       {/* Hero Section */}
-      <section className="relative h-[500px] md:h-[600px] flex items-center justify-center overflow-hidden">
+      <section className="relative h-[500px] md:h-[600px] flex items-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <Image
@@ -44,28 +44,40 @@ export default function Home() {
             alt="Mother and daughter spending quality time together - representing family support and connection"
             fill
             priority
-            className="object-cover object-center"
+            className="object-cover object-right-center"
             quality={100}
           />
-          {/* Overlay for text readability */}
-          <div className="absolute inset-0 bg-accent-purple/40"></div>
-          {/* Gradient overlay for better text contrast */}
-          <div className="absolute inset-0 bg-gradient-to-r from-accent-purple/50 via-accent-magenta/20 to-accent-green/30"></div>
+          {/* White gradient overlay for text readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/95 via-white/40 to-transparent"></div>
         </div>
         
         {/* Hero Content */}
-        <Container className="relative z-10">
-          <div className="text-center max-w-4xl mx-auto py-20">
-            <Typography variant="h1" className="mb-6 text-white drop-shadow-lg">
-              Helping You Help Your Parents with Caregiving.
-            </Typography>
+        <Container className="relative z-10 w-full">
+          <div className="grid lg:grid-cols-2 gap-12 items-center h-full py-20">
+            {/* Left - Text Content (50%) */}
+            <div className="text-left">
+              <div className="mb-6 max-w-none">
+                <Typography variant="h1" className="drop-shadow-lg text-[#8427be] text-4xl md:text-5xl lg:text-6xl leading-tight mb-2 pt-2">
+                  Helping You Help
+                </Typography>
+                <Typography variant="h1" className="drop-shadow-lg text-[#8427be] text-4xl md:text-5xl lg:text-6xl leading-tight mb-2 pt-2">
+                  Your Parents
+                </Typography>
+                <Typography variant="h1" className="drop-shadow-lg text-[#8427be] text-4xl md:text-5xl lg:text-6xl leading-tight mb-2 pt-2">
+                  with Caregiving
+                </Typography>
+              </div>
+            </div>
+            
+            {/* Right - Empty space for image visibility (50%) */}
+            <div></div>
           </div>
         </Container>
         
         {/* Scroll Indicator */}
         <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 z-10">
           <div className="animate-bounce">
-            <svg className="w-6 h-6 text-white/70" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <svg className="w-6 h-6 text-gray-600" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 14l-7 7m0 0l-7-7m7 7V3" />
             </svg>
           </div>
@@ -89,12 +101,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Lyric Image */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl w-4/5 mx-auto">
                 <Image
                   src="/images/lyric-image.png"
                   alt="Lyric healthcare services for seniors"
-                  width={600}
-                  height={400}
+                  width={480}
+                  height={320}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -125,7 +137,7 @@ export default function Home() {
                 GLP-1 Weight Loss Program and Medications.
               </Typography>
               
-              <Button size="lg" className="bg-accent-purple text-white font-bold shadow-lg hover:bg-accent-purple/90 border-2 border-accent-purple" asChild>
+              <Button size="lg" className="bg-[#9cd58c] text-white font-bold shadow-lg hover:bg-[#9cd58c]/90 border-2 border-[#9cd58c]" asChild>
                 <a href="https://getlyric.com/" target="_blank" rel="noopener noreferrer">
                   LEARN MORE
                 </a>
@@ -141,12 +153,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Senior Protect Image */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl w-4/5 mx-auto">
                 <Image
                   src="/images/senior-protect-image.png"
                   alt="Senior Protect Medicare and health benefits services"
-                  width={600}
-                  height={400}
+                  width={480}
+                  height={320}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -176,7 +188,7 @@ export default function Home() {
                 speak to an independent licensed Medicare agent to review your current plan and other options.
               </Typography>
               
-              <Button size="lg" className="bg-accent-green text-white font-bold shadow-lg hover:bg-accent-green/90 border-2 border-accent-green" asChild>
+              <Button size="lg" className="bg-[#9cd58c] text-white font-bold shadow-lg hover:bg-[#9cd58c]/90 border-2 border-[#9cd58c]" asChild>
                 <a href="https://myseniorprotect.com/" target="_blank" rel="noopener noreferrer">
                   LEARN MORE
                 </a>
@@ -192,12 +204,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Caring Village Image */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl w-4/5 mx-auto">
                 <Image
                   src="/images/caring-village-image.png"
                   alt="Caring Village family caregiving dashboard and mobile app"
-                  width={600}
-                  height={400}
+                  width={480}
+                  height={320}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -227,7 +239,7 @@ export default function Home() {
                 stressful to care for an aging loved one.
               </Typography>
               
-              <Button size="lg" className="bg-accent-magenta text-white font-bold shadow-lg hover:bg-accent-magenta/90 border-2 border-accent-magenta" asChild>
+              <Button size="lg" className="bg-[#9cd58c] text-white font-bold shadow-lg hover:bg-[#9cd58c]/90 border-2 border-[#9cd58c]" asChild>
                 <a href="https://caringvillage.com/" target="_blank" rel="noopener noreferrer">
                   LEARN MORE
                 </a>
@@ -243,12 +255,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Ruffeow Image */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl w-4/5 mx-auto">
                 <Image
                   src="/images/Ruffeow-image.png"
                   alt="REFFEOW pet healthcare services for family pets"
-                  width={600}
-                  height={400}
+                  width={480}
+                  height={320}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -278,7 +290,7 @@ export default function Home() {
                 pricing and compassionate giving. We donate 20% of our profits to animal rescue organizations.
               </Typography>
               
-              <Button size="lg" className="bg-orange-600 text-white font-bold shadow-lg hover:bg-orange-700 border-2 border-orange-600" asChild>
+              <Button size="lg" className="bg-[#9cd58c] text-white font-bold shadow-lg hover:bg-[#9cd58c]/90 border-2 border-[#9cd58c]" asChild>
                 <a href="https://ruffeow.com/" target="_blank" rel="noopener noreferrer">
                   LEARN MORE
                 </a>
@@ -294,12 +306,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Chaiz Image */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl w-4/5 mx-auto">
                 <Image
                   src="/images/chaiz-image.png"
                   alt="Chaiz auto repair service protection for families"
-                  width={600}
-                  height={400}
+                  width={480}
+                  height={320}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -329,7 +341,7 @@ export default function Home() {
                 no headache, no sales commissions, no salesperson, and no phone calls.
               </Typography>
               
-              <Button size="lg" className="bg-cyan-600 text-white font-bold shadow-lg hover:bg-cyan-700 border-2 border-cyan-600" asChild>
+              <Button size="lg" className="bg-[#9cd58c] text-white font-bold shadow-lg hover:bg-[#9cd58c]/90 border-2 border-[#9cd58c]" asChild>
                 <a href="https://www.chaiz.com/" target="_blank" rel="noopener noreferrer">
                   LEARN MORE
                 </a>
@@ -345,12 +357,12 @@ export default function Home() {
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             {/* Left - Safe4R Image */}
             <div className="relative order-2 lg:order-1">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl w-4/5 mx-auto">
                 <Image
                   src="/images/Safe4R-Image.png"
                   alt="Safe4R driving safety app connecting families"
-                  width={600}
-                  height={400}
+                  width={480}
+                  height={320}
                   className="w-full h-auto object-cover"
                 />
               </div>
@@ -386,7 +398,7 @@ export default function Home() {
                 confronted with. Reliable and safe, higher security standards and only $12.99 Monthly.
               </Typography>
               
-              <Button size="lg" className="bg-indigo-600 text-white font-bold shadow-lg hover:bg-indigo-700 border-2 border-indigo-600" asChild>
+              <Button size="lg" className="bg-[#9cd58c] text-white font-bold shadow-lg hover:bg-[#9cd58c]/90 border-2 border-[#9cd58c]" asChild>
                 <a href="https://www.safe4r.com/" target="_blank" rel="noopener noreferrer">
                   LEARN MORE
                 </a>
@@ -423,7 +435,7 @@ export default function Home() {
         <Container>
           <div className="text-center">
             <Typography variant="caption">
-              © 2024 MyParentsBenefit. All rights reserved.
+              © 2025 MyParentsBenefit. All rights reserved.
             </Typography>
           </div>
         </Container>
