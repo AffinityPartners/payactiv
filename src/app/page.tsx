@@ -22,6 +22,15 @@ export default function Home() {
                 className="h-auto w-auto max-h-12 object-contain"
               />
             </div>
+            <div className="flex items-center space-x-2">
+              <Image
+                src="/images/payactiv.png"
+                alt="Payactiv Logo"
+                width={150}
+                height={40}
+                className="h-auto w-auto max-h-10 object-contain"
+              />
+            </div>
           </div>
         </Container>
       </header>
@@ -50,17 +59,6 @@ export default function Home() {
             <Typography variant="h1" className="mb-6 text-white drop-shadow-lg">
               Helping You Help Your Parents with Caregiving.
             </Typography>
-            <Typography variant="body" className="text-xl mb-8 text-white/90 drop-shadow-md max-w-3xl mx-auto">
-              Helping Mom or Dad Begins with Managing their Care Including Doctor Visits, Prescription Reminders, and Safety Alerts Supporting Everyday Life.
-            </Typography>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button size="lg" className="bg-white text-accent-purple font-bold shadow-xl hover:bg-gray-100 border-2 border-white">
-                Get Started Today
-              </Button>
-              <Button size="lg" className="bg-accent-green text-white font-bold shadow-xl hover:bg-accent-green/90 border-2 border-accent-green">
-                Learn More
-              </Button>
-            </div>
           </div>
         </Container>
         
@@ -72,6 +70,17 @@ export default function Home() {
             </svg>
           </div>
         </div>
+      </section>
+
+      {/* Full Width Bar Section */}
+      <section className="py-8" style={{ backgroundColor: '#c83fdf' }}>
+        <Container>
+          <div className="text-center">
+            <Typography variant="body" className="text-3xl md:text-4xl text-white font-medium leading-relaxed">
+              Helping Mom or Dad Begins with Managing their Care Including Doctor Visits, Prescription Reminders, and Safety Alerts Supporting Everyday Life.
+            </Typography>
+          </div>
+        </Container>
       </section>
 
       {/* Lyric Healthcare Services Section */}
@@ -130,8 +139,21 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-green-50 to-emerald-50">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Content */}
-            <div>
+            {/* Left - Senior Protect Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/senior-protect-image.png"
+                  alt="Senior Protect Medicare and health benefits services"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Right - Content */}
+            <div className="order-1 lg:order-2">
               {/* Senior Protect Logo */}
               <div className="mb-6">
                 <Image
@@ -159,19 +181,6 @@ export default function Home() {
                   LEARN MORE
                 </a>
               </Button>
-            </div>
-            
-            {/* Right - Senior Protect Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/senior-protect-image.png"
-                  alt="Senior Protect Medicare and health benefits services"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
             </div>
           </div>
         </Container>
@@ -232,8 +241,21 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-orange-50 to-amber-50">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Content */}
-            <div>
+            {/* Left - Ruffeow Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/Ruffeow-image.png"
+                  alt="REFFEOW pet healthcare services for family pets"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Right - Content */}
+            <div className="order-1 lg:order-2">
               {/* REFFEOW Logo */}
               <div className="mb-6">
                 <Image
@@ -261,19 +283,6 @@ export default function Home() {
                   LEARN MORE
                 </a>
               </Button>
-            </div>
-            
-            {/* Right - Ruffeow Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/Ruffeow-image.png"
-                  alt="REFFEOW pet healthcare services for family pets"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
             </div>
           </div>
         </Container>
@@ -334,8 +343,21 @@ export default function Home() {
       <section className="py-20 bg-gradient-to-br from-indigo-50 to-purple-50">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left - Content */}
-            <div>
+            {/* Left - Safe4R Image */}
+            <div className="relative order-2 lg:order-1">
+              <div className="relative rounded-2xl overflow-hidden shadow-xl">
+                <Image
+                  src="/images/Safe4R-Image.png"
+                  alt="Safe4R driving safety app connecting families"
+                  width={600}
+                  height={400}
+                  className="w-full h-auto object-cover"
+                />
+              </div>
+            </div>
+            
+            {/* Right - Content */}
+            <div className="order-1 lg:order-2">
               {/* Safe4R Logo */}
               <div className="mb-6">
                 <Image
@@ -370,19 +392,6 @@ export default function Home() {
                 </a>
               </Button>
             </div>
-            
-            {/* Right - Safe4R Image */}
-            <div className="relative">
-              <div className="relative rounded-2xl overflow-hidden shadow-xl">
-                <Image
-                  src="/images/Safe4R-Image.png"
-                  alt="Safe4R driving safety app connecting families"
-                  width={600}
-                  height={400}
-                  className="w-full h-auto object-cover"
-                />
-              </div>
-            </div>
           </div>
         </Container>
       </section>
@@ -412,73 +421,7 @@ export default function Home() {
       {/* Footer */}
       <footer className="py-12 border-t border-purple-200 bg-gradient-to-br from-slate-50 to-gray-50">
         <Container>
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div>
-              <Typography variant="h4" className="mb-4">
-                Resources
-              </Typography>
-              <div className="space-y-2">
-                <a href="#" className="block text-slate-600 hover:text-accent-purple">
-                  Parenting Guides
-                </a>
-                <a href="#" className="block text-slate-600 hover:text-accent-purple">
-                  Development Milestones
-                </a>
-                <a href="#" className="block text-slate-600 hover:text-accent-purple">
-                  Educational Materials
-                </a>
-              </div>
-            </div>
-            <div>
-              <Typography variant="h4" className="mb-4">
-                Community
-              </Typography>
-              <div className="space-y-2">
-                <a href="#" className="block text-slate-600 hover:text-accent-magenta">
-                  Forums
-                </a>
-                <a href="#" className="block text-slate-600 hover:text-accent-magenta">
-                  Support Groups
-                </a>
-                <a href="#" className="block text-slate-600 hover:text-accent-magenta">
-                  Events
-                </a>
-              </div>
-            </div>
-            <div>
-              <Typography variant="h4" className="mb-4">
-                Support
-              </Typography>
-              <div className="space-y-2">
-                <a href="#" className="block text-slate-600 hover:text-accent-green">
-                  Help Center
-                </a>
-                <a href="#" className="block text-slate-600 hover:text-accent-green">
-                  Contact Us
-                </a>
-                <a href="#" className="block text-slate-600 hover:text-accent-green">
-                  FAQs
-                </a>
-              </div>
-            </div>
-            <div>
-              <Typography variant="h4" className="mb-4">
-                Company
-              </Typography>
-              <div className="space-y-2">
-                <a href="#" className="block text-slate-600 hover:text-accent-purple">
-                  About Us
-                </a>
-                <a href="#" className="block text-slate-600 hover:text-accent-purple">
-                  Privacy Policy
-                </a>
-                <a href="#" className="block text-slate-600 hover:text-accent-purple">
-                  Terms of Service
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 pt-8 border-t border-accent-magenta/20 text-center">
+          <div className="text-center">
             <Typography variant="caption">
               © 2024 MyParentsBenefit. All rights reserved.
             </Typography>
