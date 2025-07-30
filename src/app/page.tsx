@@ -663,7 +663,7 @@ export default function Home() {
               <Button 
                 size="xl" 
                 variant="default"
-                className="group min-w-[200px] bg-white text-accent-purple hover:bg-gray-50"
+                className="group w-full sm:min-w-[200px] sm:w-auto bg-white text-accent-purple hover:bg-gray-50"
                 asChild
               >
                 <Link href="/faq">
@@ -676,7 +676,7 @@ export default function Home() {
               <Button 
                 size="xl" 
                 variant="primary"
-                className="group min-w-[200px]"
+                className="group w-full sm:min-w-[200px] sm:w-auto"
                 asChild
               >
                 <Link href="/contact">
@@ -688,18 +688,7 @@ export default function Home() {
               </Button>
             </div>
             
-            {/* Trust indicators */}
-            <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-8 text-white/80">
-              <div className="flex items-center gap-2">
-                <HiStar className="w-5 h-5" />
-                <Typography variant="body-small" className="text-white">4.9/5 Average Rating</Typography>
-              </div>
-              <div className="hidden sm:block w-px h-6 bg-white/30"></div>
-              <div className="flex items-center gap-2">
-                <HiUser className="w-5 h-5" />
-                <Typography variant="body-small" className="text-white">24/7 Support Available</Typography>
-              </div>
-            </div>
+
           </div>
         </Container>
       </section>
