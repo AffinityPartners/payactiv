@@ -264,8 +264,8 @@ export default function Home() {
                 <Card variant="glass" className="relative overflow-hidden group" hoverable>
                   <CardContent noPadding>
                     <Image
-                      src="/images/lyric-image.png"
-                      alt="Lyric healthcare services for seniors"
+                      src="/images/telehealth.jpg"
+                      alt="Telehealth consultation for seniors - healthcare services"
                       width={600}
                       height={400}
                       className="w-full h-auto object-cover transition-transform duration-700 group-hover:scale-105"
@@ -364,8 +364,8 @@ export default function Home() {
             <div className="relative order-2 lg:order-1">
               <Card variant="glass" className="overflow-hidden group">
                 <Image
-                  src="/images/senior-protect-image.png"
-                  alt="Senior Protect Medicare and health benefits services"
+                  src="/images/seniorcare.jpg"
+                  alt="Senior care and Medicare benefits consultation"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
@@ -425,8 +425,8 @@ export default function Home() {
             <div className="relative order-2 lg:order-1">
               <Card variant="glass" className="overflow-hidden group">
                 <Image
-                  src="/images/caring-village-image.png"
-                  alt="Caring Village family caregiving dashboard and mobile app"
+                  src="/images/carevillage.jpg"
+                  alt="Care coordination and family caregiving support"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
@@ -486,8 +486,8 @@ export default function Home() {
             <div className="relative order-2 lg:order-1">
               <Card variant="glass" className="overflow-hidden group">
                 <Image
-                  src="/images/Ruffeow-image.png"
-                  alt="REFFEOW pet healthcare services for family pets"
+                  src="/images/vet.jpg"
+                  alt="Veterinary care and pet healthcare services"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
@@ -547,8 +547,8 @@ export default function Home() {
             <div className="relative order-2 lg:order-1">
               <Card variant="glass" className="overflow-hidden group">
                 <Image
-                  src="/images/chaiz-image.png"
-                  alt="Chaiz auto repair service protection for families"
+                  src="/images/auto.jpg"
+                  alt="Auto protection and vehicle service coverage"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
@@ -608,8 +608,8 @@ export default function Home() {
             <div className="relative order-2 lg:order-1">
               <Card variant="glass" className="overflow-hidden group">
                 <Image
-                  src="/images/Safe4R-Image.png"
-                  alt="Safe4R driving safety app connecting families"
+                  src="/images/safe.jpg"
+                  alt="Driving safety technology and family protection"
                   width={600}
                   height={400}
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
