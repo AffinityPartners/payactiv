@@ -94,6 +94,43 @@ export function MobileNav({ className }: MobileNavProps) {
 
               {/* Menu Content */}
               <div className="flex-1 px-6 py-8 space-y-6">
+                {/* Quick Links */}
+                <div className="space-y-4">
+                  <Typography variant="label" className="text-accent-purple">
+                    Quick Links
+                  </Typography>
+                  <div className="space-y-3">
+                    <Link
+                      href="/"
+                      onClick={closeMenu}
+                      className="block py-2 px-4 text-sm text-gray-600 hover:text-accent-purple hover:bg-purple-50 rounded-lg transition-all duration-200"
+                    >
+                      Home
+                    </Link>
+                    <Link
+                      href="#services"
+                      onClick={closeMenu}
+                      className="block py-2 px-4 text-sm text-gray-600 hover:text-accent-purple hover:bg-purple-50 rounded-lg transition-all duration-200"
+                    >
+                      Services
+                    </Link>
+                    <Link
+                      href="/faq"
+                      onClick={closeMenu}
+                      className="block py-2 px-4 text-sm text-gray-600 hover:text-accent-purple hover:bg-purple-50 rounded-lg transition-all duration-200"
+                    >
+                      FAQ
+                    </Link>
+                    <Link
+                      href="/contact"
+                      onClick={closeMenu}
+                      className="block py-2 px-4 text-sm text-gray-600 hover:text-accent-purple hover:bg-purple-50 rounded-lg transition-all duration-200"
+                    >
+                      Contact
+                    </Link>
+                  </div>
+                </div>
+
                 {/* Service Links */}
                 <div className="space-y-4">
                   <Typography variant="label" className="text-accent-purple">

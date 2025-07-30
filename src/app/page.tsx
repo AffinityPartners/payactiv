@@ -714,9 +714,9 @@ export default function Home() {
         </div>
         
         <Container className="relative z-10">
-          <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-12 mb-12">
-            {/* Brand Column */}
-            <div className="space-y-6">
+          <div className="space-y-12 mb-12">
+            {/* Brand Column - Full width on mobile */}
+            <div className="space-y-6 md:max-w-md">
               <Image
                 src="/images/MyParentsBenefits.png"
                 alt="MyParentsBenefit Logo"
@@ -749,46 +749,47 @@ export default function Home() {
                 </button>
               </div>
             </div>
-            
-            {/* Quick Links */}
-            <div className="space-y-6">
-              <Typography variant="h5" className="text-gray-900">
-                Quick Links
-              </Typography>
-              <ul className="space-y-3">
-                {['Home', 'Services', 'About Us', 'Contact'].map((link) => (
-                  <li key={link}>
-                    <Link 
-                      href={link === 'Services' ? '#services' : `/${link.toLowerCase().replace(' ', '-')}`}
-                      className="text-gray-600 hover:text-accent-purple transition-colors duration-300"
-                    >
-                      {link}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
-            {/* Resources */}
-            <div className="space-y-6">
-              <Typography variant="h5" className="text-gray-900">
-                Resources
-              </Typography>
-              <ul className="space-y-3">
-                {['FAQ', 'Blog', 'Support Center', 'Privacy Policy'].map((link) => (
-                  <li key={link}>
-                    <Link 
-                      href={`/${link.toLowerCase().replace(' ', '-')}`}
-                      className="text-gray-600 hover:text-accent-purple transition-colors duration-300"
-                    >
-                      {link}
-                    </Link>
-                  </li>
-                ))}
-              </ul>
-            </div>
-            
 
+            {/* Menu Sections - 2 columns on mobile, responsive on larger screens */}
+            <div className="grid grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-12">
+              {/* Quick Links */}
+              <div className="space-y-6">
+                <Typography variant="h5" className="text-gray-900">
+                  Quick Links
+                </Typography>
+                <ul className="space-y-3">
+                  {['Home', 'Services', 'About Us', 'Contact'].map((link) => (
+                    <li key={link}>
+                      <Link 
+                        href={link === 'Services' ? '#services' : `/${link.toLowerCase().replace(' ', '-')}`}
+                        className="text-gray-600 hover:text-accent-purple transition-colors duration-300"
+                      >
+                        {link}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+              
+              {/* Resources */}
+              <div className="space-y-6">
+                <Typography variant="h5" className="text-gray-900">
+                  Resources
+                </Typography>
+                <ul className="space-y-3">
+                  {['FAQ', 'Blog', 'Support Center', 'Privacy Policy'].map((link) => (
+                    <li key={link}>
+                      <Link 
+                        href={`/${link.toLowerCase().replace(' ', '-')}`}
+                        className="text-gray-600 hover:text-accent-purple transition-colors duration-300"
+                      >
+                        {link}
+                      </Link>
+                    </li>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
           
           {/* Bottom Bar */}
