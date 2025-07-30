@@ -310,7 +310,7 @@ export default function FAQPage() {
       </section>
 
       {/* Contact CTA Section */}
-      <section className="py-16 bg-gradient-to-r from-[#8427be] via-[#c83fdf] to-[#10b981]">
+      <section className="py-16 bg-gradient-to-r from-[#8427be] via-[#c83fdf] to-[#a8c73c]">
         <Container>
           <div className="text-center max-w-3xl mx-auto">
             <Typography variant="h2" className="mb-4 text-white">
@@ -324,7 +324,7 @@ export default function FAQPage() {
                 Contact Support
               </Button>
               <Link href="/">
-                <Button size="lg" className="bg-[#10b981] text-white font-bold shadow-xl hover:bg-[#10b981]/90 border-2 border-[#10b981]">
+                <Button size="lg" className="bg-[#a8c73c] text-white font-bold shadow-xl hover:bg-[#a8c73c]/90 border-2 border-[#a8c73c]">
                   Explore Services
                 </Button>
               </Link>

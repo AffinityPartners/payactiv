@@ -20,9 +20,9 @@
   --accent-magenta-light: 218, 112, 236;
   --accent-magenta-dark: 176, 38, 199;
   
-  --accent-green: 16, 185, 129;
-  --accent-green-light: 52, 211, 153;
-  --accent-green-dark: 5, 150, 105;
+  --accent-green: 168, 199, 60;
+  --accent-green-light: 193, 216, 90;
+  --accent-green-dark: 143, 176, 45;
   
   /* Neutral Palette */
   --gray-50: 249, 250, 251;
@@ -38,9 +38,9 @@
   
   /* Premium Gradients */
   --gradient-primary: linear-gradient(135deg, #8427be 0%, #a855f7 50%, #c084fc 100%);
-  --gradient-accent: linear-gradient(135deg, #10b981 0%, #34d399 50%, #059669 100%);
-  --gradient-premium: linear-gradient(135deg, #8427be 0%, #c83fdf 25%, #f472b6 50%, #fbbf24 75%, #10b981 100%);
-  --gradient-subtle: linear-gradient(135deg, rgba(132, 39, 190, 0.05) 0%, rgba(200, 63, 223, 0.05) 50%, rgba(16, 185, 129, 0.05) 100%);
+  --gradient-accent: linear-gradient(135deg, #a8c73c 0%, #c1d85a 50%, #8fb02d 100%);
+  --gradient-premium: linear-gradient(135deg, #8427be 0%, #c83fdf 25%, #f472b6 50%, #fbbf24 75%, #a8c73c 100%);
+  --gradient-subtle: linear-gradient(135deg, rgba(132, 39, 190, 0.05) 0%, rgba(200, 63, 223, 0.05) 50%, rgba(168, 199, 60, 0.05) 100%);
   
   /* Shadow System */
   --shadow-sm: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
