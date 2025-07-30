@@ -165,7 +165,7 @@ export default function Home() {
                 >
                   <Link href="#services">
                     <span className="flex items-center justify-center">
-                      Explore Services
+                      Explore Solutions
                       <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </Link>
