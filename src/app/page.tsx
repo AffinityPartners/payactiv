@@ -127,15 +127,7 @@ export default function Home() {
             <div className="text-left space-y-8">
               {/* Overline with premium styling */}
               <div className="space-y-6">
-                <div 
-                  className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full animate-fade-in"
-                  style={{ animationDelay: '0.1s' }}
-                >
-                  <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
-                  <Typography variant="label" className="text-purple-700">
-                    Comprehensive Family Care Platform
-                  </Typography>
-                </div>
+
                 
                 {/* Main heading with gradient effect */}
                 <Typography 
@@ -177,45 +169,10 @@ export default function Home() {
                     </span>
                   </Link>
                 </Button>
-                <Button 
-                  size="lg" 
-                  variant="glass"
-                  className="backdrop-blur-md w-full sm:w-auto"
-                  asChild
-                >
-                  <Link href="/contact">
-                    Get Started
-                  </Link>
-                </Button>
+
               </div>
               
-              {/* Trust indicators */}
-              <div className="flex items-center gap-6 pt-8 animate-fade-in" style={{ animationDelay: '0.8s' }}>
-                <div className="flex -space-x-2">
-                  {[
-                    '/images/Family-1.jpg',
-                    '/images/Family-2.jpg',
-                    '/images/Family-3.jpg',
-                    '/images/Family-4.jpg',
-                    '/images/Family-5.jpg'
-                  ].map((src, index) => (
-                    <div key={index} className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden">
-                      <Image
-                        src={src}
-                        alt={`Family ${index + 1}`}
-                        fill
-                        className="object-cover"
-                        sizes="40px"
-                      />
-                    </div>
-                  ))}
-                </div>
-                <div>
-                  <Typography variant="body-small" className="text-gray-500">
-                    Trusted by <span className="font-semibold text-gray-700">10,000+</span> families
-                  </Typography>
-                </div>
-              </div>
+
             </div>
           </div>
         </Container>
@@ -342,7 +299,7 @@ export default function Home() {
                 >
                   <a href="https://getlyric.com/" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center">
-                      Learn More
+                      LEARN MORE
                       <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </a>

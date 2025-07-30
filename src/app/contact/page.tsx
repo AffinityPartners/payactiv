@@ -226,7 +226,7 @@ export default function ContactPage() {
                     <div className="pt-4">
                       <Button 
                         size="lg" 
-                        className="bg-[#9cd58c] text-white font-bold shadow-lg hover:bg-[#9cd58c]/90 border-2 border-[#9cd58c] w-full group"
+                        className="bg-[#10b981] text-white font-bold shadow-lg hover:bg-[#10b981]/90 border-2 border-[#10b981] w-full group"
                         type="submit"
                       >
                         Send Message
@@ -305,7 +305,7 @@ export default function ContactPage() {
                 </Typography>
                 <Button 
                   size="lg" 
-                  className="bg-[#9cd58c] text-white font-bold shadow-lg hover:bg-[#9cd58c]/90 border-2 border-[#9cd58c] group"
+                  className="bg-[#10b981] text-white font-bold shadow-lg hover:bg-[#10b981]/90 border-2 border-[#10b981] group"
                   asChild
                 >
                   <Link href="/faq">
@@ -327,7 +327,7 @@ export default function ContactPage() {
                 </Typography>
                 <Button 
                   size="lg" 
-                  className="bg-[#9cd58c] text-white font-bold shadow-lg hover:bg-[#9cd58c]/90 border-2 border-[#9cd58c] group"
+                  className="bg-[#10b981] text-white font-bold shadow-lg hover:bg-[#10b981]/90 border-2 border-[#10b981] group"
                   asChild
                 >
                   <Link href="/#services">

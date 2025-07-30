@@ -22,9 +22,9 @@ const config: Config = {
         },
         // Custom brand colors
         accent: {
-          green: '#9cd58c',
-          'green-light': '#b2e3a3',
-          'green-dark': '#86c574',
+          green: '#10b981',
+          'green-light': '#34d399',
+          'green-dark': '#059669',
           magenta: '#c83fdf',
           'magenta-light': '#da6eec',
           'magenta-dark': '#b32ad2',
@@ -199,7 +199,7 @@ const config: Config = {
         'soft': '0 2px 15px 0 rgba(31, 38, 135, 0.1)',
         'glow-purple': '0 0 30px rgba(132, 39, 190, 0.3)',
         'glow-magenta': '0 0 30px rgba(200, 63, 223, 0.3)',
-        'glow-green': '0 0 30px rgba(156, 213, 140, 0.3)',
+        'glow-green': '0 0 30px rgba(16, 185, 129, 0.3)',
       },
       borderRadius: {
         '4xl': '2rem',
