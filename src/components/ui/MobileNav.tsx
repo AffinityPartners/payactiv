@@ -93,13 +93,13 @@ export function MobileNav({ className }: MobileNavProps) {
               </div>
 
               {/* Menu Content */}
-              <div className="flex-1 px-6 py-8 space-y-6">
+              <div className="flex-1 px-6 py-8 space-y-3">
                 {/* Quick Links */}
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <Typography variant="label" className="text-accent-purple">
                     Quick Links
                   </Typography>
-                  <div className="space-y-3">
+                  <div className="space-y-1">
                     <Link
                       href="/"
                       onClick={closeMenu}
@@ -132,11 +132,11 @@ export function MobileNav({ className }: MobileNavProps) {
                 </div>
 
                 {/* Service Links */}
-                <div className="space-y-4">
+                <div className="space-y-2">
                   <Typography variant="label" className="text-accent-purple">
                     Our Partners
                   </Typography>
-                  <div className="space-y-3">
+                  <div className="space-y-1">
                     <a
                       href="https://getlyric.com/"
                       target="_blank"
