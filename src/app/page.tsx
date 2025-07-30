@@ -123,7 +123,7 @@ export default function Home() {
         
         {/* Hero Content with enhanced styling */}
         <Container className="relative z-10 w-full">
-          <div className="max-w-3xl py-12 sm:py-16 md:py-24 lg:py-32 px-4">
+          <div className="max-w-3xl py-12 sm:py-16 md:py-24 lg:py-32">
             <div className="text-left space-y-8">
               {/* Overline with premium styling */}
               <div className="space-y-6">
@@ -132,7 +132,7 @@ export default function Home() {
                 {/* Main heading with gradient effect */}
                 <Typography 
                   variant="h1" 
-                  className="animate-slide-up overflow-visible"
+                  className="animate-slide-up overflow-visible text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
                   gradient
                   style={{ animationDelay: '0.2s', overflow: 'visible' }}
                 >
@@ -233,7 +233,7 @@ export default function Home() {
                 </Card>
                 
                 {/* Floating badge */}
-                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 animate-float-premium">
+                <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 animate-float-premium hidden lg:block">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
                       <HiCheckCircle className="w-6 h-6 text-white" />
@@ -252,7 +252,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-8 text-center lg:text-left">
+            <div className="order-1 lg:order-2 space-y-8 text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full">
                   <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
@@ -331,7 +331,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
+            <div className="order-1 lg:order-2 space-y-6 text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 rounded-full">
                   <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
@@ -392,7 +392,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
+            <div className="order-1 lg:order-2 space-y-6 text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-rose-100 rounded-full">
                   <div className="w-2 h-2 bg-rose-500 rounded-full animate-pulse"></div>
@@ -453,7 +453,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
+            <div className="order-1 lg:order-2 space-y-6 text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full">
                   <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
@@ -514,7 +514,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
+            <div className="order-1 lg:order-2 space-y-6 text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 rounded-full">
                   <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
@@ -575,7 +575,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
+            <div className="order-1 lg:order-2 space-y-6 text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 rounded-full">
                   <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
@@ -624,7 +624,7 @@ export default function Home() {
       {/* Premium CTA Section */}
       <section className="relative py-24 sm:py-32 lg:py-40 overflow-hidden">
         {/* Premium gradient background */}
-        <div className="absolute inset-0 bg-gradient-to-br from-accent-purple via-accent-magenta to-accent-green">
+        <div className="absolute inset-0 bg-gradient-to-br from-accent-purple via-accent-magenta to-accent-purple">
           <div className="absolute inset-0 bg-gradient-to-t from-black/20 via-transparent to-black/20"></div>
         </div>
         
@@ -676,7 +676,7 @@ export default function Home() {
               <Button 
                 size="xl" 
                 variant="primary"
-                className="group w-full sm:min-w-[200px] sm:w-auto"
+                className="group w-full sm:min-w-[200px] sm:w-auto bg-gradient-to-r from-[#059669] to-[#10b981] hover:from-[#048655] hover:to-[#059669]"
                 asChild
               >
                 <Link href="/contact">
@@ -775,29 +775,7 @@ export default function Home() {
               </ul>
             </div>
             
-            {/* Newsletter */}
-            <div className="space-y-6">
-              <Typography variant="h5" className="text-gray-900">
-                Stay Updated
-              </Typography>
-              <Typography variant="body-small" className="text-gray-600">
-                Get the latest caregiving tips and resources delivered to your inbox.
-              </Typography>
-              <form className="space-y-3">
-                <input
-                  type="email"
-                  placeholder="Enter your email"
-                  className="w-full px-4 py-3 rounded-xl border border-gray-300 focus:border-accent-purple focus:ring-2 focus:ring-accent-purple/20 transition-all duration-300"
-                />
-                <Button 
-                  type="submit" 
-                  variant="primary" 
-                  className="w-full"
-                >
-                  Subscribe
-                </Button>
-              </form>
-            </div>
+
           </div>
           
           {/* Bottom Bar */}
