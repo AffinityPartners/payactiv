@@ -9,6 +9,16 @@ import { Container } from '@/components/layout/Container'
 import { Grid } from '@/components/layout/Grid'
 import { MobileNav } from '@/components/ui/MobileNav'
 import { useState, useEffect } from 'react'
+import { 
+  HiArrowRight, 
+  HiCheckCircle, 
+  HiCheck, 
+  HiQuestionMarkCircle, 
+  HiMail, 
+  HiStar, 
+  HiUser
+} from 'react-icons/hi'
+import { FaFacebook, FaTwitter, FaLinkedin } from 'react-icons/fa'
 
 
 export default function Home() {
@@ -153,26 +163,24 @@ export default function Home() {
               </Typography>
               
               {/* Enhanced CTA buttons */}
-              <div className="flex flex-row gap-4 pt-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
+              <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 pt-4 animate-fade-in" style={{ animationDelay: '0.6s' }}>
                 <Button 
                   size="lg" 
                   variant="primary"
-                  className="group shadow-xl hover:shadow-2xl"
+                  className="group shadow-xl hover:shadow-2xl w-full sm:w-auto"
                   asChild
                 >
                   <Link href="#services">
-                    <span className="flex items-center">
+                    <span className="flex items-center justify-center">
                       Explore Services
-                      <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
+                      <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </Link>
                 </Button>
                 <Button 
                   size="lg" 
                   variant="glass"
-                  className="backdrop-blur-md"
+                  className="backdrop-blur-md w-full sm:w-auto"
                   asChild
                 >
                   <Link href="/contact">
@@ -184,8 +192,22 @@ export default function Home() {
               {/* Trust indicators */}
               <div className="flex items-center gap-6 pt-8 animate-fade-in" style={{ animationDelay: '0.8s' }}>
                 <div className="flex -space-x-2">
-                  {[1, 2, 3, 4, 5].map((i) => (
-                    <div key={i} className="w-10 h-10 rounded-full bg-gradient-to-br from-purple-400 to-purple-600 border-2 border-white" />
+                  {[
+                    '/images/Family-1.jpg',
+                    '/images/Family-2.jpg',
+                    '/images/Family-3.jpg',
+                    '/images/Family-4.jpg',
+                    '/images/Family-5.jpg'
+                  ].map((src, index) => (
+                    <div key={index} className="relative w-10 h-10 rounded-full border-2 border-white overflow-hidden">
+                      <Image
+                        src={src}
+                        alt={`Family ${index + 1}`}
+                        fill
+                        className="object-cover"
+                        sizes="40px"
+                      />
+                    </div>
                   ))}
                 </div>
                 <div>
@@ -229,9 +251,7 @@ export default function Home() {
       </section>
 
       {/* Enhanced Lyric Healthcare Services Section */}
-      <section className="py-20 sm:py-24 md:py-32 lg:py-40 relative overflow-hidden">
-        {/* Subtle background pattern */}
-        <div className="absolute inset-0 bg-gradient-to-br from-blue-50/30 via-white to-purple-50/30"></div>
+      <section className="py-20 sm:py-24 md:py-32 lg:py-40 relative overflow-hidden bg-gradient-to-br from-purple-50 to-indigo-50">
         
         <Container className="relative z-10">
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
@@ -259,9 +279,7 @@ export default function Home() {
                 <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 animate-float-premium">
                   <div className="flex items-center gap-3">
                     <div className="w-12 h-12 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center">
-                      <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
-                      </svg>
+                      <HiCheckCircle className="w-6 h-6 text-white" />
                     </div>
                     <div>
                       <Typography variant="body-small" weight="semibold" className="text-gray-900">
@@ -307,9 +325,7 @@ export default function Home() {
                   'Prescription Management'
                 ].map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-accent-green flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <HiCheck className="w-5 h-5 text-accent-green flex-shrink-0" />
                     <Typography variant="body-small" className="text-gray-700">
                       {feature}
                     </Typography>
@@ -326,10 +342,8 @@ export default function Home() {
                 >
                   <a href="https://getlyric.com/" target="_blank" rel="noopener noreferrer">
                     <span className="flex items-center">
-                      Learn More About Lyric
-                      <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                      </svg>
+                      Learn More
+                      <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </a>
                 </Button>
@@ -339,8 +353,11 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* Section Divider */}
+      <div className="h-1 bg-gradient-to-r from-accent-purple via-accent-magenta to-accent-green"></div>
+
       {/* Enhanced Senior Protect Medicare Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-emerald-50/50 via-white to-green-50/50">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 relative overflow-hidden bg-white">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Enhanced Senior Protect Image */}
@@ -381,13 +398,13 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="primary"
-                  className="w-full sm:w-auto"
+                  className="group w-full sm:w-auto"
                   asChild
                 >
                   <a href="https://myseniorprotect.com/" target="_blank" rel="noopener noreferrer">
-                    <span>
+                    <span className="flex items-center">
                       LEARN MORE
-                      <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
+                      <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </a>
                 </Button>
@@ -397,8 +414,11 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* Section Divider */}
+      <div className="h-1 bg-gradient-to-r from-accent-purple via-accent-magenta to-accent-green"></div>
+
       {/* Enhanced Caring Village Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-rose-50/50 via-white to-pink-50/50">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-rose-50 to-pink-50">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Enhanced Caring Village Image */}
@@ -439,13 +459,13 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="primary"
-                  className="w-full sm:w-auto"
+                  className="group w-full sm:w-auto"
                   asChild
                 >
                   <a href="https://caringvillage.com/" target="_blank" rel="noopener noreferrer">
-                    <span>
+                    <span className="flex items-center">
                       LEARN MORE
-                      <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
+                      <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </a>
                 </Button>
@@ -455,8 +475,11 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* Section Divider */}
+      <div className="h-1 bg-gradient-to-r from-accent-green via-accent-magenta to-accent-purple"></div>
+
       {/* Enhanced REFFEOW Pet Healthcare Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-amber-50/50 via-white to-orange-50/50">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 relative overflow-hidden bg-white">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Enhanced Ruffeow Image */}
@@ -497,13 +520,13 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="primary"
-                  className="w-full sm:w-auto"
+                  className="group w-full sm:w-auto"
                   asChild
                 >
                   <a href="https://ruffeow.com/" target="_blank" rel="noopener noreferrer">
-                    <span>
+                    <span className="flex items-center">
                       LEARN MORE
-                      <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
+                      <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </a>
                 </Button>
@@ -513,8 +536,11 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* Section Divider */}
+      <div className="h-1 bg-gradient-to-r from-accent-purple via-accent-magenta to-accent-green"></div>
+
       {/* Enhanced Chaiz Auto Protection Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-cyan-50/50 via-white to-blue-50/50">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 relative overflow-hidden bg-gradient-to-br from-green-50 to-emerald-50">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Enhanced Chaiz Image */}
@@ -555,13 +581,13 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="primary"
-                  className="w-full sm:w-auto"
+                  className="group w-full sm:w-auto"
                   asChild
                 >
                   <a href="https://www.chaiz.com/" target="_blank" rel="noopener noreferrer">
-                    <span>
+                    <span className="flex items-center">
                       LEARN MORE
-                      <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
+                      <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </a>
                 </Button>
@@ -571,8 +597,11 @@ export default function Home() {
         </Container>
       </section>
 
+      {/* Section Divider */}
+      <div className="h-1 bg-gradient-to-r from-accent-green via-accent-magenta to-accent-purple"></div>
+
       {/* Enhanced Safe4R Driving Safety Section */}
-      <section className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-br from-indigo-50/50 via-white to-purple-50/50">
+      <section className="py-16 sm:py-20 md:py-24 lg:py-32 relative overflow-hidden bg-white">
         <Container>
           <div className="grid lg:grid-cols-2 gap-12 lg:gap-16 items-center">
             {/* Left - Enhanced Safe4R Image */}
@@ -619,13 +648,13 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="primary"
-                  className="w-full sm:w-auto"
+                  className="group w-full sm:w-auto"
                   asChild
                 >
                   <a href="https://www.safe4r.com/" target="_blank" rel="noopener noreferrer">
-                    <span>
+                    <span className="flex items-center">
                       LEARN MORE
-                      <span className="ml-2 inline-block transition-transform group-hover:translate-x-1">→</span>
+                      <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                     </span>
                   </a>
                 </Button>
@@ -677,30 +706,26 @@ export default function Home() {
               <Button 
                 size="xl" 
                 variant="default"
-                className="min-w-[200px] bg-white text-accent-purple hover:bg-gray-50"
+                className="group min-w-[200px] bg-white text-accent-purple hover:bg-gray-50"
                 asChild
               >
                 <Link href="/faq">
                   <span className="flex items-center">
                     Browse FAQs
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
-                    </svg>
+                    <HiQuestionMarkCircle className="ml-2 w-5 h-5 transition-transform group-hover:scale-110" />
                   </span>
                 </Link>
               </Button>
               <Button 
                 size="xl" 
                 variant="primary"
-                className="min-w-[200px]"
+                className="group min-w-[200px]"
                 asChild
               >
                 <Link href="/contact">
                   <span className="flex items-center">
                     Contact Us
-                    <svg className="ml-2 w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 4.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 002 2z" />
-                    </svg>
+                    <HiMail className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </Link>
               </Button>
@@ -709,16 +734,12 @@ export default function Home() {
             {/* Trust indicators */}
             <div className="pt-8 flex flex-col sm:flex-row items-center justify-center gap-8 text-white/80">
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path d="M9.049 2.927c.3-.921 1.603-.921 1.902 0l1.07 3.292a1 1 0 00.95.69h3.462c.969 0 1.371 1.24.588 1.81l-2.8 2.034a1 1 0 00-.364 1.118l1.07 3.292c.3.921-.755 1.688-1.54 1.118l-2.8-2.034a1 1 0 00-1.175 0l-2.8 2.034c-.784.57-1.838-.197-1.539-1.118l1.07-3.292a1 1 0 00-.364-1.118L2.98 8.72c-.783-.57-.38-1.81.588-1.81h3.461a1 1 0 00.951-.69l1.07-3.292z" />
-                </svg>
+                <HiStar className="w-5 h-5" />
                 <Typography variant="body-small" className="text-white">4.9/5 Average Rating</Typography>
               </div>
               <div className="hidden sm:block w-px h-6 bg-white/30"></div>
               <div className="flex items-center gap-2">
-                <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                  <path fillRule="evenodd" d="M10 9a3 3 0 100-6 3 3 0 000 6zm-7 9a7 7 0 1114 0H3z" clipRule="evenodd" />
-                </svg>
+                <HiUser className="w-5 h-5" />
                 <Typography variant="body-small" className="text-white">24/7 Support Available</Typography>
               </div>
             </div>
@@ -749,17 +770,24 @@ export default function Home() {
               </Typography>
               <div className="flex gap-4">
                 {/* Social media icons */}
-                {['facebook', 'twitter', 'linkedin'].map((social) => (
-                  <button
-                    key={social}
-                    className="w-10 h-10 rounded-full bg-gray-100 hover:bg-accent-purple/10 hover:text-accent-purple transition-all duration-300 flex items-center justify-center"
-                    aria-label={`Follow us on ${social}`}
-                  >
-                    <svg className="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
-                      <path fillRule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zM8.736 6.979C9.208 6.193 9.696 6 10 6c.304 0 .792.193 1.264.979a1 1 0 001.715-1.029C12.279 4.784 11.232 4 10 4s-2.279.784-2.979 1.95c-.285.475-.507 1-.67 1.55H6a1 1 0 000 2h.013a9.358 9.358 0 000 1H6a1 1 0 100 2h.351c.163.55.385 1.075.67 1.55C7.721 15.216 8.768 16 10 16s2.279-.784 2.979-1.95a1 1 0 10-1.715-1.029c-.472.786-.96.979-1.264.979-.304 0-.792-.193-1.264-.979a4.265 4.265 0 01-.264-.521H10a1 1 0 100-2H8.017a7.36 7.36 0 010-1H10a1 1 0 100-2H8.472c.08-.185.167-.36.264-.521z" clipRule="evenodd" />
-                    </svg>
-                  </button>
-                ))}
+                <button
+                  className="w-10 h-10 rounded-full bg-gray-100 hover:bg-accent-purple/10 hover:text-accent-purple transition-all duration-300 flex items-center justify-center"
+                  aria-label="Follow us on Facebook"
+                >
+                  <FaFacebook className="w-5 h-5" />
+                </button>
+                <button
+                  className="w-10 h-10 rounded-full bg-gray-100 hover:bg-accent-purple/10 hover:text-accent-purple transition-all duration-300 flex items-center justify-center"
+                  aria-label="Follow us on Twitter"
+                >
+                  <FaTwitter className="w-5 h-5" />
+                </button>
+                <button
+                  className="w-10 h-10 rounded-full bg-gray-100 hover:bg-accent-purple/10 hover:text-accent-purple transition-all duration-300 flex items-center justify-center"
+                  aria-label="Follow us on LinkedIn"
+                >
+                  <FaLinkedin className="w-5 h-5" />
+                </button>
               </div>
             </div>
             

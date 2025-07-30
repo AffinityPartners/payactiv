@@ -7,6 +7,7 @@ import { Button } from '@/components/ui/Button'
 import { Card, CardContent, CardHeader } from '@/components/ui/Card'
 import { Typography } from '@/components/ui/Typography'
 import { Container } from '@/components/layout/Container'
+import { HiChevronDown } from 'react-icons/hi'
 
 interface FAQItem {
   id: string
@@ -282,16 +283,11 @@ export default function FAQPage() {
                           {item.question}
                         </Typography>
                         <div className="flex-shrink-0">
-                          <svg
+                          <HiChevronDown
                             className={`w-6 h-6 text-gray-500 transition-transform duration-200 ${
                               openItems.has(item.id) ? 'rotate-180' : ''
                             }`}
-                            fill="none"
-                            stroke="currentColor"
-                            viewBox="0 0 24 24"
-                          >
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
-                          </svg>
+                          />
                         </div>
                       </div>
                     </button>

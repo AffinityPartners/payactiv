@@ -6,6 +6,7 @@ import { Card, CardContent } from '@/components/ui/Card'
 import { Typography } from '@/components/ui/Typography'
 import { Button } from '@/components/ui/Button'
 import { cn } from '@/lib/utils'
+import { HiCheck, HiArrowRight } from 'react-icons/hi'
 
 interface ServiceSectionProps {
   title: string
@@ -175,9 +176,7 @@ export function ServiceSection({
               <div className="grid grid-cols-2 gap-4">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <svg className="w-5 h-5 text-accent-green flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                    </svg>
+                    <HiCheck className="w-5 h-5 text-accent-green flex-shrink-0" />
                     <Typography variant="body-small" className="text-gray-700">
                       {feature}
                     </Typography>
@@ -196,9 +195,7 @@ export function ServiceSection({
                 <a href={ctaHref} target="_blank" rel="noopener noreferrer">
                   <span className="flex items-center">
                     {ctaText}
-                    <svg className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
-                    </svg>
+                    <HiArrowRight className="ml-2 w-5 h-5 transition-transform group-hover:translate-x-1" />
                   </span>
                 </a>
               </Button>
