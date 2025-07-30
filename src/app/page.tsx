@@ -294,7 +294,7 @@ export default function Home() {
                 <Button 
                   size="lg" 
                   variant="primary"
-                  className="group"
+                  className="group w-full sm:w-auto"
                   asChild
                 >
                   <a href="https://getlyric.com/" target="_blank" rel="noopener noreferrer">
