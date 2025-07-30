@@ -202,7 +202,7 @@ export default function ContactPage() {
                         <option value="">Select a subject</option>
                         <option value="general">General Inquiry</option>
                         <option value="healthcare">Healthcare Services</option>
-                        <option value="medicare">Medicare & Benefits</option>
+                        <option value="medicare">MEDICARE BENEFITS</option>
                         <option value="caregiving">Caregiving Support</option>
                         <option value="technical">Technical Support</option>
                         <option value="partnership">Partnership Opportunities</option>

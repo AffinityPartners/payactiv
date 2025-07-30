@@ -252,7 +252,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-8">
+            <div className="order-1 lg:order-2 space-y-8 text-center lg:text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-blue-100 rounded-full">
                   <div className="w-2 h-2 bg-blue-500 rounded-full animate-pulse"></div>
@@ -331,12 +331,12 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 rounded-full">
                   <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
                   <Typography variant="label" className="text-emerald-700">
-                    Medicare & Benefits
+                    MEDICARE BENEFITS
                   </Typography>
                 </div>
                 
@@ -392,7 +392,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-rose-100 rounded-full">
                   <div className="w-2 h-2 bg-rose-500 rounded-full animate-pulse"></div>
@@ -453,7 +453,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full">
                   <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
@@ -514,7 +514,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 rounded-full">
                   <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
@@ -575,7 +575,7 @@ export default function Home() {
             </div>
             
             {/* Right - Enhanced Content */}
-            <div className="order-1 lg:order-2 space-y-6">
+            <div className="order-1 lg:order-2 space-y-6 text-center lg:text-left">
               <div className="space-y-4">
                 <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 rounded-full">
                   <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
