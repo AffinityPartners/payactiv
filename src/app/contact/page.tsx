@@ -100,7 +100,7 @@ export default function ContactPage() {
             
             {/* Contact Form */}
             <div className="animate-slide-up">
-              <Card variant="glow" className="p-8">
+              <Card variant="glow" className="p-10 lg:p-12">
                 <CardHeader className="p-0 mb-8">
                   <Typography variant="h3" className="mb-4">
                     Send Us a Message
@@ -111,10 +111,10 @@ export default function ContactPage() {
                 </CardHeader>
                 
                 <CardContent className="p-0">
-                  <form className="space-y-6">
-                    <div className="grid sm:grid-cols-2 gap-4 sm:gap-6">
+                  <form className="space-y-8">
+                    <div className="grid sm:grid-cols-2 gap-6 sm:gap-8">
                       <div>
-                        <label htmlFor="firstName" className="block text-sm font-semibold text-accent-purple mb-2">
+                        <label htmlFor="firstName" className="block text-sm font-medium text-gray-700 mb-3">
                           First Name *
                         </label>
                         <input
@@ -122,12 +122,12 @@ export default function ContactPage() {
                           id="firstName"
                           name="firstName"
                           required
-                          className="w-full px-3 sm:px-4 py-2.5 sm:py-3 rounded-xl sm:rounded-2xl border border-slate-200 focus:border-accent-purple focus:ring-2 focus:ring-accent-purple/20 outline-none transition-all duration-200 bg-white/80 backdrop-blur-sm text-sm sm:text-base"
+                          className="w-full px-5 py-4 text-base rounded-xl border-2 border-gray-200 focus:border-accent-purple focus:ring-4 focus:ring-accent-purple/10 outline-none transition-all duration-300 bg-white shadow-sm hover:border-gray-300 hover:shadow-md"
                           placeholder="Enter your first name"
                         />
                       </div>
                       <div>
-                        <label htmlFor="lastName" className="block text-sm font-semibold text-accent-purple mb-2">
+                        <label htmlFor="lastName" className="block text-sm font-medium text-gray-700 mb-3">
                           Last Name *
                         </label>
                         <input
@@ -135,14 +135,14 @@ export default function ContactPage() {
                           id="lastName"
                           name="lastName"
                           required
-                          className="w-full px-4 py-3 rounded-2xl border border-slate-200 focus:border-accent-purple focus:ring-2 focus:ring-accent-purple/20 outline-none transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                          className="w-full px-5 py-4 text-base rounded-xl border-2 border-gray-200 focus:border-accent-purple focus:ring-4 focus:ring-accent-purple/10 outline-none transition-all duration-300 bg-white shadow-sm hover:border-gray-300 hover:shadow-md"
                           placeholder="Enter your last name"
                         />
                       </div>
                     </div>
 
                     <div>
-                      <label htmlFor="email" className="block text-sm font-semibold text-accent-purple mb-2">
+                      <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-3">
                         Email *
                       </label>
                       <input
@@ -150,13 +150,13 @@ export default function ContactPage() {
                         id="email"
                         name="email"
                         required
-                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 focus:border-accent-purple focus:ring-2 focus:ring-accent-purple/20 outline-none transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                        className="w-full px-5 py-4 text-base rounded-xl border-2 border-gray-200 focus:border-accent-purple focus:ring-4 focus:ring-accent-purple/10 outline-none transition-all duration-300 bg-white shadow-sm hover:border-gray-300 hover:shadow-md"
                         placeholder="Enter your email address"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="phone" className="block text-sm font-semibold text-accent-purple mb-2">
+                      <label htmlFor="phone" className="block text-sm font-medium text-gray-700 mb-3">
                         Phone *
                       </label>
                       <input
@@ -164,13 +164,13 @@ export default function ContactPage() {
                         id="phone"
                         name="phone"
                         required
-                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 focus:border-accent-purple focus:ring-2 focus:ring-accent-purple/20 outline-none transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                        className="w-full px-5 py-4 text-base rounded-xl border-2 border-gray-200 focus:border-accent-purple focus:ring-4 focus:ring-accent-purple/10 outline-none transition-all duration-300 bg-white shadow-sm hover:border-gray-300 hover:shadow-md"
                         placeholder="Enter your phone number"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="employerName" className="block text-sm font-semibold text-accent-purple mb-2">
+                      <label htmlFor="employerName" className="block text-sm font-medium text-gray-700 mb-3">
                         Employer Name *
                       </label>
                       <input
@@ -178,20 +178,20 @@ export default function ContactPage() {
                         id="employerName"
                         name="employerName"
                         required
-                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 focus:border-accent-purple focus:ring-2 focus:ring-accent-purple/20 outline-none transition-all duration-200 bg-white/80 backdrop-blur-sm"
+                        className="w-full px-5 py-4 text-base rounded-xl border-2 border-gray-200 focus:border-accent-purple focus:ring-4 focus:ring-accent-purple/10 outline-none transition-all duration-300 bg-white shadow-sm hover:border-gray-300 hover:shadow-md"
                         placeholder="Enter your employer name"
                       />
                     </div>
 
                     <div>
-                      <label htmlFor="subject" className="block text-sm font-semibold text-accent-purple mb-2">
+                      <label htmlFor="subject" className="block text-sm font-medium text-gray-700 mb-3">
                         Subject *
                       </label>
                       <select
                         id="subject"
                         name="subject"
                         required
-                        className="w-full px-4 py-3 pr-8 rounded-2xl border border-slate-200 focus:border-accent-purple focus:ring-2 focus:ring-accent-purple/20 outline-none transition-all duration-200 bg-white/80 backdrop-blur-sm appearance-none"
+                        className="w-full px-5 py-4 pr-12 text-base rounded-xl border-2 border-gray-200 focus:border-accent-purple focus:ring-4 focus:ring-accent-purple/10 outline-none transition-all duration-300 bg-white shadow-sm hover:border-gray-300 hover:shadow-md appearance-none"
                         style={{
                           backgroundImage: `url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 20 20'%3e%3cpath stroke='%236b7280' stroke-linecap='round' stroke-linejoin='round' stroke-width='1.5' d='M6 8l4 4 4-4'/%3e%3c/svg%3e")`,
                           backgroundPosition: 'right 0.75rem center',
@@ -210,7 +210,7 @@ export default function ContactPage() {
                     </div>
 
                     <div>
-                      <label htmlFor="message" className="block text-sm font-semibold text-accent-purple mb-2">
+                      <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-3">
                         Message *
                       </label>
                       <textarea
@@ -218,12 +218,12 @@ export default function ContactPage() {
                         name="message"
                         rows={6}
                         required
-                        className="w-full px-4 py-3 rounded-2xl border border-slate-200 focus:border-accent-purple focus:ring-2 focus:ring-accent-purple/20 outline-none transition-all duration-200 bg-white/80 backdrop-blur-sm resize-none"
+                        className="w-full px-5 py-4 text-base rounded-xl border-2 border-gray-200 focus:border-accent-purple focus:ring-4 focus:ring-accent-purple/10 outline-none transition-all duration-300 bg-white shadow-sm hover:border-gray-300 hover:shadow-md resize-none min-h-[120px]"
                         placeholder="Tell us how we can help you..."
                       ></textarea>
                     </div>
 
-                    <div className="pt-4">
+                    <div className="pt-8">
                       <Button 
                         size="lg" 
                         className="bg-[#a8c73c] text-white font-bold shadow-lg hover:bg-[#a8c73c]/90 border-2 border-[#a8c73c] w-full group"

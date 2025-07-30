@@ -117,8 +117,8 @@ export default function Home() {
             blurDataURL="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wBDAAYEBQYFBAYGBQYHBwYIChAKCgkJChQODwwQFxQYGBcUFhYaHSUfGhsjHBYWICwgIyYnKSopGR8tMC0oMCUoKSj/2wBDAQcHBwoIChMKChMoGhYaKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCgoKCj/wAARCAACAAIDASIAAhEBAxEB/8QAFQABAQAAAAAAAAAAAAAAAAAAAAf/xAAhEAACAQMDBQAAAAAAAAAAAAABAgMABAUGIWEREiMxQf/EABUBAQEAAAAAAAAAAAAAAAAAAAMF/8QAGhEAAgIDAAAAAAAAAAAAAAAAAAECEgMRkf/aAAwDAQACEQMRAD8AltJagyeH0AthI5xdrLcNM91BF5pX2HaH9bcfaSXWGaRmknyJckliyjqTzSlT54b6bk+h0R//2Q=="
           />
           {/* Premium gradient overlay */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/85 to-transparent"></div>
-          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white/30"></div>
+          <div className="absolute inset-0 bg-gradient-to-r from-gray-900/80 via-gray-900/60 to-gray-900/40 sm:from-white sm:via-white/85 sm:to-transparent"></div>
+          <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-gray-900/20 sm:to-white/30"></div>
         </div>
         
         {/* Hero Content with enhanced styling */}
@@ -132,23 +132,24 @@ export default function Home() {
                 {/* Main heading with gradient effect */}
                 <Typography 
                   variant="h1" 
-                  className="animate-slide-up overflow-visible text-4xl sm:text-5xl md:text-6xl lg:text-7xl"
-                  gradient
+                  className="animate-slide-up overflow-visible text-5xl sm:text-6xl md:text-7xl lg:text-8xl hero-gradient-desktop"
                   style={{ animationDelay: '0.2s', overflow: 'visible' }}
                 >
                   Helping You Help
                   <br />
                   Your Parents with
                   <br className="sm:hidden" />
-                  <span className="text-accent-purple"> Caregiving</span>
+                  <span className="text-accent-green sm:text-accent-purple"> Caregiving</span>
                 </Typography>
               </div>
               
               {/* Subheading with better spacing */}
               <Typography 
                 variant="body-large" 
-                className="text-gray-600 max-w-2xl animate-fade-in leading-relaxed" 
-                style={{ animationDelay: '0.4s' }}
+                className="text-white sm:text-gray-600 max-w-2xl animate-fade-in leading-relaxed [text-shadow:_0_1px_3px_rgba(0,0,0,0.3)] sm:[text-shadow:_0_1px_3px_rgba(255,255,255,0.8)]"
+                style={{ 
+                  animationDelay: '0.4s'
+                }}
               >
                 Discover comprehensive resources, expert guidance, and community support 
                 to navigate your family caregiving journey with confidence and peace of mind.
@@ -179,7 +180,7 @@ export default function Home() {
       </section>
 
       {/* Premium Full Width Bar Section */}
-      <section className="relative py-10 sm:py-14 md:py-18 lg:py-20 overflow-hidden" id="services">
+      <section className="relative py-6 sm:py-10 md:py-14 lg:py-16 overflow-hidden" id="services">
         {/* Premium gradient background */}
         <div className="absolute inset-0 bg-gradient-to-r from-accent-purple via-accent-magenta to-accent-purple">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-transparent"></div>
@@ -195,7 +196,7 @@ export default function Home() {
           <div className="text-center max-w-4xl mx-auto">
             <Typography 
               variant="h2" 
-              className="text-white font-light leading-relaxed"
+              className="text-white font-light leading-relaxed text-lg sm:text-xl md:text-2xl lg:text-3xl xl:text-4xl"
               as="p"
             >
               Helping Mom or Dad Begins with Managing their Care Including 
@@ -572,6 +573,23 @@ export default function Home() {
                   className="w-full h-auto object-cover group-hover:scale-105 transition-transform duration-700"
                 />
               </Card>
+              
+              {/* Floating badge */}
+              <div className="absolute -bottom-6 -right-6 bg-white rounded-2xl shadow-xl p-4 animate-float-premium hidden lg:block">
+                <div className="flex items-center gap-3">
+                  <div className="w-12 h-12 bg-gradient-to-br from-indigo-500 to-indigo-600 rounded-xl flex items-center justify-center">
+                    <span className="text-white font-bold text-lg">1M+</span>
+                  </div>
+                  <div>
+                    <Typography variant="body-small" weight="semibold" className="text-gray-900">
+                      People Protected
+                    </Typography>
+                    <Typography variant="caption" className="text-gray-500">
+                      Trusted globally
+                    </Typography>
+                  </div>
+                </div>
+              </div>
             </div>
             
             {/* Right - Enhanced Content */}
@@ -589,12 +607,7 @@ export default function Home() {
                 </Typography>
               </div>
               
-              <Card variant="soft" className="p-6 mb-6">
-                <Typography variant="h4" className="text-accent-purple font-semibold">
-                  Over 1 Million+ People Protected
-                </Typography>
-              </Card>
-              
+
               <Typography variant="body-large" className="text-gray-600">
                 Safe4R is the world&apos;s first Application where the power of social community exponentially 
                 increases the immediate and direct response to any situation we or our loved ones may be 
