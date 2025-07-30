@@ -117,13 +117,15 @@ export default function Home() {
             <div className="text-left space-y-8">
               {/* Overline with premium styling */}
               <div className="space-y-6">
-                <Typography 
-                  variant="overline" 
-                  className="animate-fade-in text-accent-purple font-semibold"
+                <div 
+                  className="inline-flex items-center gap-2 px-4 py-2 bg-purple-100 rounded-full animate-fade-in"
                   style={{ animationDelay: '0.1s' }}
                 >
-                  Comprehensive Family Care Platform
-                </Typography>
+                  <div className="w-2 h-2 bg-purple-500 rounded-full animate-pulse"></div>
+                  <Typography variant="label" className="text-purple-700">
+                    Comprehensive Family Care Platform
+                  </Typography>
+                </div>
                 
                 {/* Main heading with gradient effect */}
                 <Typography 
@@ -357,9 +359,12 @@ export default function Home() {
             {/* Right - Enhanced Content */}
             <div className="order-1 lg:order-2 space-y-6">
               <div className="space-y-4">
-                <Typography variant="overline" className="text-emerald-600">
-                  Medicare & Benefits
-                </Typography>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-emerald-100 rounded-full">
+                  <div className="w-2 h-2 bg-emerald-500 rounded-full animate-pulse"></div>
+                  <Typography variant="label" className="text-emerald-700">
+                    Medicare & Benefits
+                  </Typography>
+                </div>
                 
                 <Typography variant="h2">
                   Medicare and Other Senior Health Benefits Can Impact Family Caregiving.
@@ -412,9 +417,12 @@ export default function Home() {
             {/* Right - Enhanced Content */}
             <div className="order-1 lg:order-2 space-y-6">
               <div className="space-y-4">
-                <Typography variant="overline" className="text-rose-600">
-                  Care Coordination
-                </Typography>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-rose-100 rounded-full">
+                  <div className="w-2 h-2 bg-rose-500 rounded-full animate-pulse"></div>
+                  <Typography variant="label" className="text-rose-700">
+                    Care Coordination
+                  </Typography>
+                </div>
                 
                 <Typography variant="h2">
                   Save Time. Eliminate Frustration. And Keep Care Coordinated.
@@ -467,9 +475,12 @@ export default function Home() {
             {/* Right - Enhanced Content */}
             <div className="order-1 lg:order-2 space-y-6">
               <div className="space-y-4">
-                <Typography variant="overline" className="text-orange-600">
-                  Pet Healthcare
-                </Typography>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-orange-100 rounded-full">
+                  <div className="w-2 h-2 bg-orange-500 rounded-full animate-pulse"></div>
+                  <Typography variant="label" className="text-orange-700">
+                    Pet Healthcare
+                  </Typography>
+                </div>
                 
                 <Typography variant="h2">
                   Healthcare for All Family (Furry) Loved Ones.
@@ -522,9 +533,12 @@ export default function Home() {
             {/* Right - Enhanced Content */}
             <div className="order-1 lg:order-2 space-y-6">
               <div className="space-y-4">
-                <Typography variant="overline" className="text-cyan-600">
-                  Auto Protection
-                </Typography>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-cyan-100 rounded-full">
+                  <div className="w-2 h-2 bg-cyan-500 rounded-full animate-pulse"></div>
+                  <Typography variant="label" className="text-cyan-700">
+                    Auto Protection
+                  </Typography>
+                </div>
                 
                 <Typography variant="h2">
                   Keep Parents Safe with Auto Repair Service Protection Shop. Save. Protect.
@@ -577,9 +591,12 @@ export default function Home() {
             {/* Right - Enhanced Content */}
             <div className="order-1 lg:order-2 space-y-6">
               <div className="space-y-4">
-                <Typography variant="overline" className="text-indigo-600">
-                  Driving Safety
-                </Typography>
+                <div className="inline-flex items-center gap-2 px-4 py-2 bg-indigo-100 rounded-full">
+                  <div className="w-2 h-2 bg-indigo-500 rounded-full animate-pulse"></div>
+                  <Typography variant="label" className="text-indigo-700">
+                    Driving Safety
+                  </Typography>
+                </div>
                 
                 <Typography variant="h2">
                   Keep Mom and Dad Connected When Driving.

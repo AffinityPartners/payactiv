@@ -30,7 +30,7 @@ export function Card({
 
   // Premium variant styles
   const variantClasses = {
-    default: 'bg-white border border-gray-200 dark:bg-gray-800 dark:border-gray-700',
+    default: 'bg-white border border-gray-200',
     
     glass: cn(
       'bg-white/80 backdrop-blur-xl border border-white/30',
@@ -106,7 +106,7 @@ export function CardHeader({ children, className, separator = false }: CardHeade
   return (
     <div className={cn(
       'px-6 py-6 lg:px-8 lg:py-8',
-      separator && 'border-b border-gray-100 dark:border-gray-700',
+      separator && 'border-b border-gray-100',
       className
     )}>
       {children}
@@ -141,8 +141,8 @@ export function CardFooter({ children, className, separator = true }: CardFooter
   return (
     <div className={cn(
       'px-6 py-4 lg:px-8 lg:py-6',
-      separator && 'border-t border-gray-100 dark:border-gray-700',
-      'bg-gray-50/50 dark:bg-gray-900/50',
+      separator && 'border-t border-gray-100',
+      'bg-gray-50/50',
       className
     )}>
       {children}

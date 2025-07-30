@@ -10,6 +10,8 @@ const nextConfig = {
   compiler: {
     removeConsole: process.env.NODE_ENV === 'production',
   },
+  // Fixed configuration for serverExternalPackages
+  serverExternalPackages: [],
 }
 
 module.exports = nextConfig 
