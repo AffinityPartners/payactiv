@@ -100,7 +100,7 @@ export default function Home() {
       </header>
 
       {/* Enhanced Hero Section */}
-      <section className="relative min-h-[650px] sm:min-h-[700px] md:min-h-[800px] lg:min-h-[900px] flex items-center">
+      <section className="relative min-h-[500px] sm:min-h-[650px] md:min-h-[750px] lg:min-h-[850px] flex items-center">
         {/* Premium gradient background */}
         <div className="absolute inset-0 z-0 bg-gradient-to-br from-purple-50/50 via-white to-green-50/30"></div>
         
@@ -123,7 +123,7 @@ export default function Home() {
         
         {/* Hero Content with enhanced styling */}
         <Container className="relative z-10 w-full">
-          <div className="max-w-3xl py-20 sm:py-24 md:py-32 lg:py-36 px-4">
+          <div className="max-w-3xl py-12 sm:py-16 md:py-24 lg:py-32 px-4">
             <div className="text-left space-y-8">
               {/* Overline with premium styling */}
               <div className="space-y-6">
@@ -179,7 +179,7 @@ export default function Home() {
       </section>
 
       {/* Premium Full Width Bar Section */}
-      <section className="relative py-16 sm:py-20 md:py-24 overflow-hidden" id="services">
+      <section className="relative py-10 sm:py-14 md:py-18 lg:py-20 overflow-hidden" id="services">
         {/* Premium gradient background */}
         <div className="absolute inset-0 bg-gradient-to-r from-accent-purple via-accent-magenta to-accent-purple">
           <div className="absolute inset-0 bg-gradient-to-b from-transparent via-black/10 to-transparent"></div>
