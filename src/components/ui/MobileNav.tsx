@@ -57,13 +57,23 @@ export function MobileNav({ className }: MobileNavProps) {
         <>
           {/* Backdrop */}
           <div
-            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-40 md:hidden"
+            className="fixed inset-0 bg-black/50 backdrop-blur-sm z-50 md:hidden"
             onClick={closeMenu}
           />
           
           {/* Menu Panel */}
-          <div className="fixed top-0 right-0 h-full w-80 max-w-[90vw] bg-white shadow-2xl z-50 md:hidden">
-            <div className="flex flex-col h-full">
+          <div 
+            className="fixed top-0 right-0 h-full w-80 max-w-[90vw] shadow-2xl z-[60] md:hidden border-l-4 border-blue-500" 
+            style={{ 
+              backgroundColor: '#ffffff', 
+              opacity: 1,
+              backgroundImage: 'none',
+              background: '#ffffff',
+              minHeight: '100vh',
+              minWidth: '280px',
+            }}
+          >
+            <div className="flex flex-col h-full bg-white" style={{ backgroundColor: '#ffffff' }}>
               {/* Menu Header */}
               <div className="flex items-center justify-between p-6 border-b border-gray-200">
                 <Image
